@@ -43,8 +43,9 @@ public class StatsService {
 
     public int salesBelowAverage(int[] sales) {
         int counter = 0;
+        int averageAmount = calculationSum(sales) / sales.length;
         for (int sale : sales) {
-            if (sale < 15) {
+            if (sale < averageAmount ) {
                 counter++;
             }
         }
@@ -53,8 +54,9 @@ public class StatsService {
 
     public int salesOverAverage(int[] sales) {
         int counter = 0;
+        int averageAmount = calculationSum(sales) / sales.length;
         for (int sale : sales) {
-            if (sale > 15) {
+            if (sale > averageAmount) {
                 counter++;
             }
         }
